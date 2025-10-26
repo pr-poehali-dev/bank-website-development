@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get transaction history",
+      "method": "GET",
+      "headers": {
+        "X-User-Id": "1"
+      },
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    }
+  ]
+}

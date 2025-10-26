@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Register new user",
+      "method": "POST",
+      "body": {
+        "action": "register",
+        "phone": "+79001234567",
+        "birth_date": "2000-01-01",
+        "password": "securepass123"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Login user",
+      "method": "POST",
+      "body": {
+        "action": "login",
+        "phone": "+79999999999",
+        "password": "admin123hash"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "isAdmin": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

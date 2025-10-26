@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "Get user cards",
+      "method": "GET",
+      "headers": {
+        "X-User-Id": "1"
+      },
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get pending card requests (admin)",
+      "method": "GET",
+      "queryParams": {
+        "admin": "requests"
+      },
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
