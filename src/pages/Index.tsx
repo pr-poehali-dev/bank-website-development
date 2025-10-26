@@ -472,7 +472,7 @@ function Index() {
                             {user.is_blocked ? 'Заблокирована' : 'Активна'}
                           </Badge>
                         </div>
-                        <p className="text-2xl font-bold">{user.balance.toFixed(2)} ₽</p>
+                        <p className="text-2xl font-bold">{Number(user.balance || 0).toFixed(2)} ₽</p>
                         <div className="flex space-x-2">
                           <Button size="sm" onClick={() => handleAddBalance(user.card_id)}>
                             <Icon name="Plus" size={16} className="mr-1" />
